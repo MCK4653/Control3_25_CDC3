@@ -33,11 +33,17 @@ public class GaleriaArte implements GestionStock<Obra> {
 	
 	@Override
 	public List<Obra> findAll(){
-		return new ArrayList<>(obras);
+		List<Obra> lista =new ArrayList<>(obras);
+		
+		List<Obra> listai= lista.reversed();
+		return listai;
 	}
 
 	@Override
 	public void save(Obra obra) {
+	
+	
+		
 		obras.add(obra);
 		log.fine("Obra añadida");	
 	}
